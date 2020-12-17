@@ -4,6 +4,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
+import '../../../api_keys.dart' show GOOGLE_API_KEY;
+
 // For storing our result
 class Suggestion {
   final String placeId;
@@ -32,7 +34,7 @@ class PlaceApiProvider {
 
   PlaceApiProvider(this.sessionToken);
 
-  final apiKey = 'AIzaSyAbIexxkCVCCAQZA3_8Fl26qpsFuHIst88';
+  static const apiKey = GOOGLE_API_KEY;
 
   Future<List<Suggestion>> fetchSuggestions(String input, String lang) async {
     final request =
