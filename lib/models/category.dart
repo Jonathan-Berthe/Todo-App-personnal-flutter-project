@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class Category {
   String name;
   //List<int> id;
